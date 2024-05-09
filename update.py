@@ -3,7 +3,7 @@ from subprocess import run
 import httpx
 
 URL = "https://api.github.com/repos/prettier/prettier/releases/latest"
-HOOKFILE = "pre-commit-hooks.yaml"
+HOOKFILE = ".pre-commit-hooks.yaml"
 
 
 def main():
