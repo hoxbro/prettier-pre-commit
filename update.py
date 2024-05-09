@@ -3,13 +3,13 @@ from textwrap import dedent
 
 import httpx
 
-URL = "https://api.github.com/repos/prettier/prettier/releases/latest"
+URL = "https://registry.npmjs.org/prettier/latest"
 HOOKFILE = ".pre-commit-hooks.yaml"
 
 
 def main():
     resp = httpx.get(URL).raise_for_status()
-    version = resp.json()["tag_name"]
+    version = resp.json()["version"]
 
     hook = f"""\
     - id: prettier
