@@ -1,3 +1,4 @@
+import os
 from subprocess import run
 
 import httpx
@@ -35,6 +36,8 @@ def main():
     run(["git", "add", HOOKFILE], check=True)
     run(["git", "commit", "-m", f"Update to version {version}"], check=True)
     run(["git", "tag", f"v{version}"], check=True)
+    run(["git", "push", "origin"], check=True)
+    run(["git", "push", "origin", "--tags"], check=True)
 
 
 if __name__ == "__main__":
