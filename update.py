@@ -1,5 +1,5 @@
-import os
 from subprocess import run
+from textwrap import dedent
 
 import httpx
 
@@ -22,7 +22,8 @@ def main():
       require_serial: false
       additional_dependencies: ["prettier@{version}"]
       minimum_pre_commit_version: "0"
-    """
+      """
+    hook = dedent(hook)
 
     with open(HOOKFILE) as f:
         cur_hook = f.read()
