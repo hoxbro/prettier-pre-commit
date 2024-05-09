@@ -23,5 +23,3 @@ jobs:
           git config user.email 'github-actions[bot]@users.noreply.github.com'
       - name: Check for updates
         run: python update.py
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
