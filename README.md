@@ -10,7 +10,7 @@ Add this to your `.pre-commit-config.yaml`:
 
 ```yaml
 - repo: https://github.com/hoxbro/prettier-pre-commit
-  rev: v3.3.3
+  rev: v3.4.1
   hooks:
     - id: prettier
       types_or: [css, javascript] # Optional
