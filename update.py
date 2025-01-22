@@ -1,3 +1,7 @@
+# /// script
+# dependencies = ["httpx"]
+# ///
+
 import re
 from subprocess import run
 from textwrap import dedent
